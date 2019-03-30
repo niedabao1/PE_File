@@ -24,15 +24,15 @@ typedef struct _MAP_FILE_STRUCT
 
 int main(int argc, char** argv)
 {
-	//if (argc < 2)
-	//{
-//		std::cout << "you should add Parameters";
-//		exit(1);
-//	}
-	//std::string Doc_ads;
-	//Doc_ads = argv[1];
+	if (argc < 2)
+	{
+		std::cout << "you should add Parameters";
+		exit(1);
+	}
+	std::string Doc_ads;
+	Doc_ads = argv[1];
 
-	FILE *PE_File = fopen("g:\\main.exe", "rb");
+	FILE *PE_File = fopen(argv[1], "rb");
 	unsigned int length;//PE文件长度
 	unsigned char *File_Br;//
 
